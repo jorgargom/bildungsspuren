@@ -20,6 +20,8 @@
     header{display:flex;align-items:center;justify-content:space-between;padding:27px 0;border-bottom:1px solid var(--line)}
     .brand{font-size:.78rem;letter-spacing:.19em;font-weight:650;text-decoration:none}
     nav{display:flex;gap:27px}
+    .header-right{display:flex;align-items:center;gap:28px}
+    .language{font-size:.8rem;color:var(--olive);text-decoration:none;border:1px solid var(--line);padding:6px 11px;white-space:nowrap}
     nav a{font-size:.83rem;text-decoration:none;color:var(--muted)}
     nav a:hover{color:var(--olive)}
     .hero{padding:105px 0 85px;max-width:850px}
@@ -42,7 +44,7 @@
     footer .wrap{display:flex;justify-content:space-between;gap:20px}
     @media(max-width:700px){
       .wrap{width:min(100% - 36px,540px)}
-      header{align-items:flex-start;gap:18px;flex-direction:column}
+      header{align-items:flex-start;gap:18px;flex-direction:column}.header-right{width:100%;justify-content:space-between;gap:12px}
       nav{gap:18px;flex-wrap:wrap}
       .hero{padding:80px 0 65px}
       .topic{grid-template-columns:48px 1fr;gap:16px;padding:30px 0}
@@ -55,12 +57,15 @@
 <body>
   <header class="wrap">
     <a class="brand" href="index.html">BILDUNGSSPUREN</a>
-    <nav aria-label="Hauptnavigation">
-      <a href="index.html#ueber-mich">Über mich</a>
-      <a href="themen.html" aria-current="page">Themen</a>
-      <a href="blog.html">Blog</a>
-      <a href="index.html#projekt">Mein Projekt</a>
-    </nav>
+    <div class="header-right">
+      <nav aria-label="Hauptnavigation">
+        <a href="index.html#ueber-mich">Über mich</a>
+        <a href="themen.html" aria-current="page">Themen</a>
+        <a href="blog.html">Blog</a>
+        <a href="index.html#projekt">Mein Projekt</a>
+      </nav>
+      <a class="language" href="es/temas.html" lang="es">Español</a>
+    </div>
   </header>
   <main>
     <section class="hero wrap">
