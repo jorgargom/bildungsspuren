@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Themen bei Bildungsspuren: mein Weg in Deutschland, Sprache und Lernen, Bildung und Pädagogik sowie persönliche Projekte.">
+  <meta name="theme-color" content="#F3EFE6">
+  <title>Themen – Bildungsspuren</title>
+  <style>
+    :root {
+      --cream:#F3EFE6; --olive:#78836A; --ink:#343A32; --sand:#D5B99A;
+      --paper:#FBF9F4; --muted:#72766C; --line:rgba(52,58,50,.16);
+      --serif:Georgia,"Times New Roman",serif; --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased}
+    a{color:inherit}
+    .wrap{width:min(1080px,calc(100% - 48px));margin:0 auto}
+    header{display:flex;align-items:center;justify-content:space-between;padding:27px 0;border-bottom:1px solid var(--line)}
+    .brand{font-size:.78rem;letter-spacing:.19em;font-weight:650;text-decoration:none}
+    nav{display:flex;gap:27px}
+    nav a{font-size:.83rem;text-decoration:none;color:var(--muted)}
+    nav a:hover{color:var(--olive)}
+    .hero{padding:105px 0 85px;max-width:850px}
+    .eyebrow,.label{color:var(--olive);text-transform:uppercase;letter-spacing:.17em;font-size:.7rem;font-weight:650}
+    .eyebrow{margin:0 0 22px}
+    h1{font:400 clamp(3.4rem,8vw,6.5rem)/1 var(--serif);letter-spacing:-.05em;margin:0 0 27px}
+    h1 span{color:var(--olive);font-style:italic}
+    .lead{font:400 clamp(1.15rem,2.4vw,1.45rem)/1.55 var(--serif);max-width:650px;margin:0}
+    .intro{color:var(--muted);max-width:610px;margin:18px 0 0}
+    .topics{border-top:1px solid var(--line);padding:20px 0 90px}
+    .topic{display:grid;grid-template-columns:90px 1fr;gap:28px;padding:38px 0;border-bottom:1px solid var(--line)}
+    .number{font:400 2rem var(--serif);color:var(--sand)}
+    h2{font:400 clamp(1.9rem,4vw,2.7rem)/1.15 var(--serif);margin:0 0 12px;letter-spacing:-.025em}
+    .topic p{color:#555B51;max-width:690px;margin:0 0 12px}
+    .topic .detail{color:var(--muted);font-size:.92rem}
+    .end{padding:75px 0 95px;text-align:center}
+    .end h2{max-width:650px;margin:0 auto 14px}
+    .end p{color:var(--muted);max-width:550px;margin:0 auto}
+    footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:.75rem}
+    footer .wrap{display:flex;justify-content:space-between;gap:20px}
+    @media(max-width:700px){
+      .wrap{width:min(100% - 36px,540px)}
+      header{align-items:flex-start;gap:18px;flex-direction:column}
+      nav{gap:18px;flex-wrap:wrap}
+      .hero{padding:80px 0 65px}
+      .topic{grid-template-columns:48px 1fr;gap:16px;padding:30px 0}
+      .number{font-size:1.5rem}
+      .topics{padding-bottom:60px}
+      footer .wrap{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <a class="brand" href="index.html">BILDUNGSSPUREN</a>
+    <nav aria-label="Hauptnavigation">
+      <a href="index.html#ueber-mich">Über mich</a>
+      <a href="themen.html" aria-current="page">Themen</a>
+      <a href="index.html#projekt">Mein Projekt</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero wrap">
+      <p class="eyebrow">Themen · Bildungsspuren</p>
+      <h1>Was mich bewegt.<br><span>Was ich entdecke.</span></h1>
+      <p class="lead">Vier Bereiche, die meinen Weg begleiten und diesem Ort nach und nach Inhalt geben.</p>
+      <p class="intro">Hier sammle ich Erfahrungen, Fragen und Gedanken. Die Themen dürfen sich entwickeln, so wie ich selbst weiterlerne.</p>
+    </section>
+    <section class="topics">
+      <div class="wrap">
+        <article class="topic">
+          <div class="number">01</div>
+          <div>
+            <p class="label">Persönliche Erfahrungen</p>
+            <h2>Mein Weg in Deutschland</h2>
+            <p>Ein neues Leben in einem anderen Land bringt viele Veränderungen mit sich. In diesem Bereich geht es um persönliche Erfahrungen, Orientierung, berufliche Schritte und darum, nach und nach den eigenen Platz zu finden.</p>
+            <p class="detail">Mögliche Beiträge: Ankommen und Alltag · Berufliche Neuorientierung · Erfahrungen und persönliche Gedanken</p>
+          </div>
+        </article>
+        <article class="topic">
+          <div class="number">02</div>
+          <div>
+            <p class="label">Sprachen und Entwicklung</p>
+            <h2>Sprache und Lernen</h2>
+            <p>Eine Sprache zu lernen verändert, wie wir kommunizieren und unsere Umgebung erleben. Hier schreibe ich über das Deutschlernen, Lernmethoden, Herausforderungen und meine Erfahrungen mit weiteren Sprachen.</p>
+            <p class="detail">Mögliche Beiträge: Deutsch lernen · Lernstrategien · Sprache im Alltag und im Beruf</p>
+          </div>
+        </article>
+        <article class="topic">
+          <div class="number">03</div>
+          <div>
+            <p class="label">Bildung und Gesellschaft</p>
+            <h2>Bildung und Pädagogik</h2>
+            <p>Mich interessieren Bildungswege, pädagogische Ansätze und die Frage, wie Menschen lernen und sich entwickeln. Dieser Bereich bietet Raum, das deutsche Bildungssystem kennenzulernen und eigene Beobachtungen und Fragen festzuhalten.</p>
+            <p class="detail">Mögliche Beiträge: Bildung in Deutschland · Erziehung und Pädagogik · Lernen und Entwicklung</p>
+          </div>
+        </article>
+        <article class="topic">
+          <div class="number">04</div>
+          <div>
+            <p class="label">Eigene Vorhaben</p>
+            <h2>Projekte und Lernmaterialien</h2>
+            <p>Hier stelle ich eigene Projekte und Materialien vor, die aus meinem Lern- und Entwicklungsweg entstehen. Dazu gehört auch ein zweisprachiges Lernheft für Spanischsprachige, die Deutsch für den Kita-Alltag brauchen.</p>
+            <p class="detail">Mögliche Beiträge: Mein erster Tag in der Kita · Lernmaterialien · Neue Ideen und Projekte</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="end wrap">
+      <p class="label">Schritt für Schritt</p>
+      <h2>Aus Gedanken werden Beiträge.</h2>
+      <p>Diese Themenbereiche sind der Anfang. Mit der Zeit werden hier persönliche Texte, Erfahrungen und Materialien entstehen.</p>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Bildungsspuren</span>
+      <span>Was mich prägt. Was ich lerne. Was bleibt.</span>
+    </div>
+  </footer>
+</body>
+</html>
