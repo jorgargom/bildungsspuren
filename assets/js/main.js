@@ -23,11 +23,13 @@
   }
 
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const isGerman = (document.documentElement.lang || "de").toLowerCase().startsWith("de");
-  const menuOpenLabel = isGerman ? "Menü öffnen" : "Abrir menú";
-  const menuCloseLabel = isGerman ? "Menü schließen" : "Cerrar menú";
-  const menuOpenText = isGerman ? "Menü" : "Menú";
-  const menuCloseText = isGerman ? "Schließen" : "Cerrar";
+  const pageLanguage = (document.documentElement.lang || "de").toLowerCase();
+  const isGerman = pageLanguage.startsWith("de");
+  const isEnglish = pageLanguage.startsWith("en");
+  const menuOpenLabel = isGerman ? "Menü öffnen" : isEnglish ? "Open menu" : "Abrir menú";
+  const menuCloseLabel = isGerman ? "Menü schließen" : isEnglish ? "Close menu" : "Cerrar menú";
+  const menuOpenText = isGerman ? "Menü" : isEnglish ? "Menu" : "Menú";
+  const menuCloseText = isGerman ? "Schließen" : isEnglish ? "Close" : "Cerrar";
 
   document.querySelectorAll(".menu-toggle").forEach((button) => {
     const panel = button.closest(".header-right");
