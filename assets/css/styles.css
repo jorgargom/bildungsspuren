@@ -841,7 +841,7 @@ body[class] header.wrap .menu-toggle { display: none; }
   }
   body[class] header.wrap .header-right { gap: 9px; }
   body[class] header.wrap .menu-toggle {
-    min-height: 40px;
+    min-height: 44px;
     padding: 12px 0 12px 12px;
   }
   body[class] header.wrap .language {
