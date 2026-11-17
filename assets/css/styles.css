@@ -869,3 +869,48 @@ body[class] header.wrap .menu-toggle { display: none; }
 @media (max-width: 980px) {
   .language-switch { align-self: flex-start; margin-top: 12px; }
 }
+
+
+/* Mobile menu button: visual consistency with Mente de Equipaje */
+.menu-toggle {
+  flex-direction: column;
+  gap: 6px;
+  min-width: 36px;
+  min-height: 42px;
+  padding: 12px 0 12px 12px;
+  border: 0;
+  border-radius: 2px;
+  background: transparent;
+}
+.menu-toggle:hover,
+.menu-toggle:focus-visible {
+  background: rgba(120, 131, 106, .08);
+  border-color: transparent;
+}
+.menu-toggle .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.menu-toggle span:not(.sr-only) {
+  display: block;
+  width: 23px;
+  height: 1px;
+  background: var(--ink);
+  transition: transform .25s ease, opacity .2s ease;
+}
+.menu-toggle[aria-expanded="true"] span:not(.sr-only):nth-of-type(2) {
+  transform: translateY(3.5px) rotate(45deg);
+}
+.menu-toggle[aria-expanded="true"] span:not(.sr-only):nth-of-type(3) {
+  transform: translateY(-3.5px) rotate(-45deg);
+}
+@media (prefers-reduced-motion: reduce) {
+  .menu-toggle span:not(.sr-only) { transition: none; }
+}
