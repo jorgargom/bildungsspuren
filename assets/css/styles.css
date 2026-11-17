@@ -842,7 +842,7 @@ body[class] header.wrap .menu-toggle { display: none; }
   body[class] header.wrap .header-right { gap: 9px; }
   body[class] header.wrap .menu-toggle {
     min-height: 40px;
-    padding: 0 11px;
+    padding: 12px 0 12px 12px;
   }
   body[class] header.wrap .language {
     padding: 6px 8px;
@@ -852,6 +852,17 @@ body[class] header.wrap .menu-toggle { display: none; }
 
 
 /* Sprachwahl: kompakt, dauerhaft sichtbar und ohne automatische Ländererkennung */
+ .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 .language-switch {
   display: inline-flex;
   align-items: center;
