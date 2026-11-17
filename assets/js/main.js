@@ -1,6 +1,11 @@
 /* Bildungsspuren: navigation and restrained scroll reveals */
 (() => {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const isGerman = (document.documentElement.lang || "de").toLowerCase().startsWith("de");
+  const menuOpenLabel = isGerman ? "Menü öffnen" : "Abrir menú";
+  const menuCloseLabel = isGerman ? "Menü schließen" : "Cerrar menú";
+  const menuOpenText = isGerman ? "Menü" : "Menú";
+  const menuCloseText = isGerman ? "Schließen" : "Cerrar";
 
   document.querySelectorAll(".menu-toggle").forEach((button) => {
     const panel = button.closest(".header-right");
@@ -10,14 +15,16 @@
     button.addEventListener("click", () => {
       const isOpen = panel.classList.toggle("is-open");
       button.setAttribute("aria-expanded", String(isOpen));
-      button.setAttribute("aria-label", isOpen ? "Menü schließen" : "Menü öffnen");
+      button.setAttribute("aria-label", isOpen ? menuCloseLabel : menuOpenLabel);
+      button.textContent = isOpen ? menuCloseText : menuOpenText;
     });
 
     nav.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
         panel.classList.remove("is-open");
         button.setAttribute("aria-expanded", "false");
-        button.setAttribute("aria-label", "Menü öffnen");
+        button.setAttribute("aria-label", menuOpenLabel);
+        button.textContent = menuOpenText;
       });
     });
 
