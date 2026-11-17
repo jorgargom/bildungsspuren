@@ -28,19 +28,17 @@
   const isEnglish = pageLanguage.startsWith("en");
   const menuOpenLabel = isGerman ? "Menü öffnen" : isEnglish ? "Open menu" : "Abrir menú";
   const menuCloseLabel = isGerman ? "Menü schließen" : isEnglish ? "Close menu" : "Cerrar menú";
-  const menuOpenText = isGerman ? "Menü" : isEnglish ? "Menu" : "Menú";
-  const menuCloseText = isGerman ? "Schließen" : isEnglish ? "Close" : "Cerrar";
-
   document.querySelectorAll(".menu-toggle").forEach((button) => {
     const panel = button.closest(".header-right");
     const nav = panel?.querySelector("nav");
+    const menuLabel = button.querySelector(".sr-only");
     if (!panel || !nav) return;
 
     button.addEventListener("click", () => {
       const isOpen = panel.classList.toggle("is-open");
       button.setAttribute("aria-expanded", String(isOpen));
       button.setAttribute("aria-label", isOpen ? menuCloseLabel : menuOpenLabel);
-      button.textContent = isOpen ? menuCloseText : menuOpenText;
+      if (menuLabel) menuLabel.textContent = isOpen ? menuCloseLabel : menuOpenLabel;
     });
 
     nav.querySelectorAll("a").forEach((link) => {
@@ -48,7 +46,7 @@
         panel.classList.remove("is-open");
         button.setAttribute("aria-expanded", "false");
         button.setAttribute("aria-label", menuOpenLabel);
-        button.textContent = menuOpenText;
+        if (menuLabel) menuLabel.textContent = menuOpenLabel;
       });
     });
 
