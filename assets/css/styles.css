@@ -657,7 +657,10 @@ body[class] header.wrap {
   align-items: center;
   justify-content: space-between;
   gap: 28px;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--cream);
 }
 body[class] header.wrap > .brand {
   flex: 0 0 auto;
