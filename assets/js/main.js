@@ -14,12 +14,12 @@
     let savedLanguage = null;
     try { savedLanguage = localStorage.getItem("bildungsspuren-language"); } catch (_) {}
     const browserLanguages = navigator.languages?.length ? navigator.languages : [navigator.language || "de"];
-    const browserPreference = browserLanguages.some((language) => language.toLowerCase().startsWith("es")) ? "es" : "de";
-    const preferredLanguage = savedLanguage === "es" || savedLanguage === "de" ? savedLanguage : browserPreference;
-    if (preferredLanguage === "es") {
-      window.location.replace("/es/");
-      return;
-    }
+    const normalized = browserLanguages.map((language) => language.toLowerCase());
+    const browserPreference = normalized.some((language) => language.startsWith("es")) ? "es"
+      : normalized.some((language) => language.startsWith("en")) ? "en" : "de";
+    const preferredLanguage = ["es", "de", "en"].includes(savedLanguage) ? savedLanguage : browserPreference;
+    if (preferredLanguage === "es") { window.location.replace("/es/"); return; }
+    if (preferredLanguage === "en") { window.location.replace("/en/"); return; }
   }
 
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
