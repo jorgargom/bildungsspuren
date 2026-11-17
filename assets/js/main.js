@@ -1,5 +1,27 @@
 /* Bildungsspuren: navigation and restrained scroll reveals */
 (() => {
+
+  // Only the language-neutral entry URL is redirected. Explicit language URLs stay untouched.
+  const languageChoices = document.querySelectorAll("[data-language-choice]");
+  languageChoices.forEach((link) => {
+    link.addEventListener("click", () => {
+      try { localStorage.setItem("bildungsspuren-language", link.dataset.languageChoice); } catch (_) {}
+    });
+  });
+
+  const isEntryPage = window.location.pathname === "/" || window.location.pathname === "/index.html";
+  if (isEntryPage) {
+    let savedLanguage = null;
+    try { savedLanguage = localStorage.getItem("bildungsspuren-language"); } catch (_) {}
+    const browserLanguages = navigator.languages?.length ? navigator.languages : [navigator.language || "de"];
+    const browserPreference = browserLanguages.some((language) => language.toLowerCase().startsWith("es")) ? "es" : "de";
+    const preferredLanguage = savedLanguage === "es" || savedLanguage === "de" ? savedLanguage : browserPreference;
+    if (preferredLanguage === "es") {
+      window.location.replace("/es/");
+      return;
+    }
+  }
+
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const isGerman = (document.documentElement.lang || "de").toLowerCase().startsWith("de");
   const menuOpenLabel = isGerman ? "Menü öffnen" : "Abrir menú";
