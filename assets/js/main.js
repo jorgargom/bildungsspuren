@@ -15,8 +15,8 @@
     try { savedLanguage = localStorage.getItem("bildungsspuren-language"); } catch (_) {}
     const browserLanguages = navigator.languages?.length ? navigator.languages : [navigator.language || "de"];
     const normalized = browserLanguages.map((language) => language.toLowerCase());
-    const browserPreference = normalized.some((language) => language.startsWith("es")) ? "es"
-      : normalized.some((language) => language.startsWith("en")) ? "en" : "de";
+    const detectedLanguage = normalized.find((language) => ["de", "es", "en"].some((code) => language.startsWith(code)));
+    const browserPreference = detectedLanguage ? detectedLanguage.slice(0, 2) : "de";
     const preferredLanguage = ["es", "de", "en"].includes(savedLanguage) ? savedLanguage : browserPreference;
     if (preferredLanguage === "es") { window.location.replace("/es/"); return; }
     if (preferredLanguage === "en") { window.location.replace("/en/"); return; }
