@@ -749,19 +749,37 @@ body[class] header.wrap .menu-toggle { display: none; }
     position: static;
   }
   body[class] header.wrap .menu-toggle {
-    display: inline-flex;
+    display: flex;
     order: 0;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 42px;
-    padding: 0 14px;
-    border: 1px solid var(--line);
+    gap: 6px;
+    min-height: 44px;
+    padding: 12px 0 12px 12px;
+    border: 0;
     border-radius: 2px;
     background: transparent;
     color: var(--ink);
-    font: inherit;
-    font-size: 12px;
-    line-height: 1;
+    cursor: pointer;
+    transition: background-color .2s ease;
+  }
+  body[class] header.wrap .menu-toggle:hover,
+  body[class] header.wrap .menu-toggle:focus-visible {
+    background: rgba(52, 58, 50, .08);
+  }
+  body[class] header.wrap .menu-toggle span:not(.sr-only) {
+    display: block;
+    width: 23px;
+    height: 1px;
+    background: var(--ink);
+    transition: transform .25s ease, opacity .2s ease;
+  }
+  body[class] header.wrap .menu-toggle[aria-expanded="true"] span:not(.sr-only):nth-of-type(2) {
+    transform: translateY(3.5px) rotate(45deg);
+  }
+  body[class] header.wrap .menu-toggle[aria-expanded="true"] span:not(.sr-only):nth-of-type(3) {
+    transform: translateY(-3.5px) rotate(-45deg);
   }
   body[class] header.wrap .language {
     order: 1;
