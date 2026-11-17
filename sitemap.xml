@@ -30,4 +30,11 @@
   <url>
     <loc>https://bildungsspuren.de/es/por-que-bildungsspuren.html</loc>
   </url>
+
+  <url><loc>https://bildungsspuren.de/en/</loc></url>
+  <url><loc>https://bildungsspuren.de/en/index.html</loc></url>
+  <url><loc>https://bildungsspuren.de/en/about.html</loc></url>
+  <url><loc>https://bildungsspuren.de/en/topics.html</loc></url>
+  <url><loc>https://bildungsspuren.de/en/blog.html</loc></url>
+  <url><loc>https://bildungsspuren.de/en/why-bildungsspuren.html</loc></url>
 </urlset>
