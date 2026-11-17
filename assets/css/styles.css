@@ -617,3 +617,31 @@ body.has-motion [data-reveal].is-visible {
 .skip-link:focus { top: 12px; }
 #main-content:focus { outline: none; }
 #site-nav .nav-project-link small { font-size: 12px; }
+
+
+/* Skip link: keep visually hidden until keyboard focus */
+.skip-link {
+  position: fixed !important;
+  top: 0 !important;
+  left: 1rem !important;
+  z-index: 10000;
+  width: max-content;
+  max-width: calc(100vw - 2rem);
+  padding: 0.75rem 1rem;
+  transform: translateY(calc(-100% - 1rem));
+  transition: transform 160ms ease;
+  background: var(--ink, #343A32);
+  color: var(--cream, #F3EFE6) !important;
+  border: 2px solid var(--olive, #626F55);
+  text-decoration: none;
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 0 !important;
+  transform: translateY(0);
+  outline: 3px solid var(--olive, #626F55);
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .skip-link { transition: none; }
+}
