@@ -831,3 +831,41 @@ body[class] header.wrap .menu-toggle { display: none; }
     font-size: 11px;
   }
 }
+
+
+/* Sprachwahl: kompakt, dauerhaft sichtbar und ohne automatische Ländererkennung */
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  flex: 0 0 auto;
+  padding: 5px;
+  border: 1px solid var(--line);
+  white-space: nowrap;
+}
+.language-switch a,
+.language-switch span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  min-height: 28px;
+  padding: 3px 6px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1;
+  text-decoration: none;
+}
+.language-switch a:hover,
+.language-switch [aria-current="page"] {
+  background: var(--ink);
+  color: var(--cream);
+}
+.language-switch .language-soon {
+  color: #85877f;
+  cursor: not-allowed;
+  opacity: .65;
+}
+@media (max-width: 980px) {
+  .language-switch { align-self: flex-start; margin-top: 12px; }
+}
