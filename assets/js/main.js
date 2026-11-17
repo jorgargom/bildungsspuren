@@ -55,7 +55,7 @@
         panel.classList.remove("is-open");
         button.setAttribute("aria-expanded", "false");
         button.setAttribute("aria-label", menuOpenLabel);
-        button.textContent = menuOpenText;
+        if (menuLabel) menuLabel.textContent = menuOpenLabel;
         button.focus();
       }
     });
