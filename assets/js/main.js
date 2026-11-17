@@ -32,6 +32,8 @@
       if (event.key === "Escape" && panel.classList.contains("is-open")) {
         panel.classList.remove("is-open");
         button.setAttribute("aria-expanded", "false");
+        button.setAttribute("aria-label", menuOpenLabel);
+        button.textContent = menuOpenText;
         button.focus();
       }
     });
