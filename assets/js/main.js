@@ -1,26 +1,7 @@
 /* Bildungsspuren: navigation and restrained scroll reveals */
 (() => {
 
-  // Only the language-neutral entry URL is redirected. Explicit language URLs stay untouched.
-  const languageChoices = document.querySelectorAll("[data-language-choice]");
-  languageChoices.forEach((link) => {
-    link.addEventListener("click", () => {
-      try { localStorage.setItem("bildungsspuren-language", link.dataset.languageChoice); } catch (_) {}
-    });
-  });
-
-  const isEntryPage = window.location.pathname === "/" || window.location.pathname === "/index.html";
-  if (isEntryPage) {
-    let savedLanguage = null;
-    try { savedLanguage = localStorage.getItem("bildungsspuren-language"); } catch (_) {}
-    const browserLanguages = navigator.languages?.length ? navigator.languages : [navigator.language || "de"];
-    const normalized = browserLanguages.map((language) => language.toLowerCase());
-    const detectedLanguage = normalized.find((language) => ["de", "es", "en"].some((code) => language.startsWith(code)));
-    const browserPreference = detectedLanguage ? detectedLanguage.slice(0, 2) : "de";
-    const preferredLanguage = ["es", "de", "en"].includes(savedLanguage) ? savedLanguage : browserPreference;
-    if (preferredLanguage === "es") { window.location.replace("/es/"); return; }
-    if (preferredLanguage === "en") { window.location.replace("/en/"); return; }
-  }
+  // Language navigation is explicit: visitors choose a version using the visible language switch.
 
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const pageLanguage = (document.documentElement.lang || "de").toLowerCase();

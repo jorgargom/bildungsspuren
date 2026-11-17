@@ -1,56 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
+<url>
     <loc>https://bildungsspuren.de/</loc>
   </url>
-  <url>
+<url>
     <loc>https://bildungsspuren.de/ueber-mich.html</loc>
   </url>
-  <url>
+<url>
     <loc>https://bildungsspuren.de/themen.html</loc>
   </url>
-  <url>
+<url>
     <loc>https://bildungsspuren.de/blog.html</loc>
   </url>
-  <url>
+<url>
     <loc>https://bildungsspuren.de/warum-bildungsspuren.html</loc>
   </url>
-  <url>
+<url>
     <loc>https://bildungsspuren.de/es/</loc>
   </url>
-  <url>
+<url>
     <loc>https://bildungsspuren.de/es/sobre-mi.html</loc>
   </url>
-  <url>
+<url>
     <loc>https://bildungsspuren.de/es/temas.html</loc>
   </url>
-  <url>
+<url>
     <loc>https://bildungsspuren.de/es/blog.html</loc>
   </url>
-  <url>
+<url>
     <loc>https://bildungsspuren.de/es/por-que-bildungsspuren.html</loc>
   </url>
-  <url>
+<url>
     <loc>https://bildungsspuren.de/en/</loc>
   </url>
-  <url>
+<url>
     <loc>https://bildungsspuren.de/en/about.html</loc>
   </url>
-  <url>
+<url>
     <loc>https://bildungsspuren.de/en/topics.html</loc>
   </url>
-  <url>
+<url>
     <loc>https://bildungsspuren.de/en/blog.html</loc>
   </url>
-  <url>
+<url>
     <loc>https://bildungsspuren.de/en/why-bildungsspuren.html</loc>
   </url>
-  <url><loc>https://bildungsspuren.de/impressum.html</loc></url>
-  <url><loc>https://bildungsspuren.de/datenschutz.html</loc></url>
-  <url><loc>https://bildungsspuren.de/de/impressum.html</loc></url>
-  <url><loc>https://bildungsspuren.de/de/datenschutz.html</loc></url>
-  <url><loc>https://bildungsspuren.de/es/aviso-legal.html</loc></url>
-  <url><loc>https://bildungsspuren.de/es/privacidad.html</loc></url>
-  <url><loc>https://bildungsspuren.de/en/imprint.html</loc></url>
-  <url><loc>https://bildungsspuren.de/en/privacy.html</loc></url>
+<url><loc>https://bildungsspuren.de/impressum.html</loc></url>
+<url><loc>https://bildungsspuren.de/datenschutz.html</loc></url>
+<url><loc>https://bildungsspuren.de/es/aviso-legal.html</loc></url>
+<url><loc>https://bildungsspuren.de/es/privacidad.html</loc></url>
+<url><loc>https://bildungsspuren.de/en/imprint.html</loc></url>
+<url><loc>https://bildungsspuren.de/en/privacy.html</loc></url>
 </urlset>
