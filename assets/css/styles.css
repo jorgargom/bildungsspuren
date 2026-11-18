@@ -1029,3 +1029,14 @@ body[class]:not(.page-legal) .wrap { width: min(1160px, calc(100% - 64px)); }
     width: min(calc(100% - 36px), 540px);
   }
 }
+
+
+/* Los bloques principales también parten del mismo ancho exterior */
+body[class]:not(.page-legal) .hero {
+  max-width: none;
+}
+body.page-blog .empty,
+body.page-blog-es .empty {
+  width: 100%;
+  max-width: none;
+}
