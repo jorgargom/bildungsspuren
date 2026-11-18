@@ -1040,3 +1040,57 @@ body.page-blog-es .empty {
   width: 100%;
   max-width: none;
 }
+
+
+/* Anchos editoriales coherentes en las páginas de contenido */
+:root { --reading-width: 760px; }
+
+body.page-about .hero,
+body.page-about-es .hero,
+body.page-topics .hero,
+body.page-topics-es .hero,
+body.page-blog .hero,
+body.page-blog-es .hero {
+  width: 100%;
+  max-width: none;
+}
+body.page-about .lead,
+body.page-about-es .lead,
+body.page-topics .lead,
+body.page-topics-es .lead,
+body.page-blog .lead,
+body.page-blog-es .lead,
+body.page-topics .intro,
+body.page-topics-es .intro,
+body.page-blog .intro,
+body.page-blog-es .intro,
+body.page-why .dek,
+body.page-why-es .dek {
+  max-width: var(--reading-width);
+}
+body.page-about .article,
+body.page-about-es .article,
+body.page-why .article,
+body.page-why-es .article {
+  width: 100%;
+  max-width: var(--reading-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+body.page-blog .empty,
+body.page-blog-es .article {
+  width: 100%;
+  max-width: var(--reading-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 700px) {
+  body.page-about .article,
+  body.page-about-es .article,
+  body.page-why .article,
+  body.page-why-es .article,
+  body.page-blog .empty,
+  body.page-blog-es .article {
+    max-width: 100%;
+  }
+}
