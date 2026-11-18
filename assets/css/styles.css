@@ -1120,6 +1120,12 @@ body.page-about-es .article.wrap {
   }
 }
 
+/* Hero- und Artikel-Container folgen in DE, ES und EN derselben Seitenbreite */
+body[class]:not(.page-legal) .hero.wrap,
+body[class]:not(.page-legal) .article.wrap {
+  max-width: none;
+}
+
 /* Hero-Einleitungen folgen auf allen Seiten der gemeinsamen Inhaltsbreite */
 body[class]:not(.page-legal) .hero .lead,
 body[class]:not(.page-legal) .hero .intro,
