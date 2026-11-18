@@ -21,7 +21,7 @@ body.page-home{margin: 0;
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;}
 body.page-home a{color: inherit;}
-body.page-home .wrap{width: min(1080px, calc(100% - 48px)); margin: 0 auto;}
+body.page-home .wrap{width: min(1160px, calc(100% - 64px)); margin: 0 auto;}
 body.page-home header{display: flex; align-items: center; justify-content: space-between;
       padding: 27px 0; border-bottom: 1px solid var(--line);}
 body.page-home .brand{font-size: .78rem; letter-spacing: .19em; font-weight: 650;
@@ -33,7 +33,7 @@ body.page-home nav a{font-size: .83rem; text-decoration: none; color: var(--mute
       transition: color .2s;}
 body.page-home nav a:hover{color: var(--olive);}
 body.page-home .hero{min-height: 590px; display: flex; flex-direction: column;
-      justify-content: center; padding: 100px 0 110px; max-width: 850px;}
+      justify-content: center; padding: 100px 0 110px; max-width: none;}
 body.page-home .eyebrow{color: var(--olive); text-transform: uppercase; letter-spacing: .18em;
       font-size: .72rem; font-weight: 650; margin: 0 0 25px;}
 body.page-home h1{font: 400 clamp(3.5rem, 9vw, 7.3rem)/.98 var(--serif);
