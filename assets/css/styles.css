@@ -12,80 +12,80 @@
 html { scroll-behavior: smooth; }
 
 /* index.html */
-body.page-home, body.page-home *{box-sizing: border-box;}
+body:is(.page-home, .page-home-es), body:is(.page-home, .page-home-es) *{box-sizing: border-box;}
 html{scroll-behavior: smooth;}
-body.page-home{margin: 0;
+body:is(.page-home, .page-home-es){margin: 0;
       background: var(--cream);
       color: var(--ink);
       font-family: var(--sans);
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;}
-body.page-home a{color: inherit;}
-body.page-home .wrap{width: min(1160px, calc(100% - 64px)); margin: 0 auto;}
-body.page-home header{display: flex; align-items: center; justify-content: space-between;
+body:is(.page-home, .page-home-es) a{color: inherit;}
+body:is(.page-home, .page-home-es) .wrap{width: min(1160px, calc(100% - 64px)); margin: 0 auto;}
+body:is(.page-home, .page-home-es) header{display: flex; align-items: center; justify-content: space-between;
       padding: 27px 0; border-bottom: 1px solid var(--line);}
-body.page-home .brand{font-size: .78rem; letter-spacing: .19em; font-weight: 650;
+body:is(.page-home, .page-home-es) .brand{font-size: .78rem; letter-spacing: .19em; font-weight: 650;
       text-decoration: none;}
-body.page-home nav{display: flex; gap: 27px;}
-body.page-home .header-right{display:flex;align-items:center;gap:28px}
-body.page-home .language{font-size:.8rem;color:var(--olive);text-decoration:none;border:1px solid var(--line);padding:6px 11px;white-space:nowrap}
-body.page-home nav a{font-size: .83rem; text-decoration: none; color: var(--muted);
+body:is(.page-home, .page-home-es) nav{display: flex; gap: 27px;}
+body:is(.page-home, .page-home-es) .header-right{display:flex;align-items:center;gap:28px}
+body:is(.page-home, .page-home-es) .language{font-size:.8rem;color:var(--olive);text-decoration:none;border:1px solid var(--line);padding:6px 11px;white-space:nowrap}
+body:is(.page-home, .page-home-es) nav a{font-size: .83rem; text-decoration: none; color: var(--muted);
       transition: color .2s;}
-body.page-home nav a:hover{color: var(--olive);}
-body.page-home .hero{min-height: 590px; display: flex; flex-direction: column;
+body:is(.page-home, .page-home-es) nav a:hover{color: var(--olive);}
+body:is(.page-home, .page-home-es) .hero{min-height: 590px; display: flex; flex-direction: column;
       justify-content: center; padding: 100px 0 110px; max-width: none;}
-body.page-home .eyebrow{color: var(--olive); text-transform: uppercase; letter-spacing: .18em;
+body:is(.page-home, .page-home-es) .eyebrow{color: var(--olive); text-transform: uppercase; letter-spacing: .18em;
       font-size: .72rem; font-weight: 650; margin: 0 0 25px;}
-body.page-home h1{font: 400 clamp(3.5rem, 9vw, 7.3rem)/.98 var(--serif);
+body:is(.page-home, .page-home-es) h1{font: 400 clamp(3.5rem, 9vw, 7.3rem)/.98 var(--serif);
       letter-spacing: -.055em; margin: 0;}
-body.page-home h1 span{display: block; color: var(--olive); font-style: italic;}
-body.page-home .rule{width: 58px; height: 2px; background: var(--sand); margin: 35px 0 25px;}
-body.page-home .claim{font: 400 clamp(1.15rem, 2.5vw, 1.55rem)/1.5 var(--serif); margin: 0 0 13px;}
-body.page-home .intro{max-width: 570px; color: var(--muted); font-size: 1rem; margin: 0;}
-body.page-home .section{padding: 88px 0; border-top: 1px solid var(--line);}
-body.page-home .section-label{color: var(--olive); text-transform: uppercase; letter-spacing: .16em;
+body:is(.page-home, .page-home-es) h1 span{display: block; color: var(--olive); font-style: italic;}
+body:is(.page-home, .page-home-es) .rule{width: 58px; height: 2px; background: var(--sand); margin: 35px 0 25px;}
+body:is(.page-home, .page-home-es) .claim{font: 400 clamp(1.15rem, 2.5vw, 1.55rem)/1.5 var(--serif); margin: 0 0 13px;}
+body:is(.page-home, .page-home-es) .intro{max-width: 570px; color: var(--muted); font-size: 1rem; margin: 0;}
+body:is(.page-home, .page-home-es) .section{padding: 88px 0; border-top: 1px solid var(--line);}
+body:is(.page-home, .page-home-es) .section-label{color: var(--olive); text-transform: uppercase; letter-spacing: .16em;
       font-size: .7rem; font-weight: 650; margin: 0 0 18px;}
-body.page-home h2{font: 400 clamp(2.2rem, 5vw, 3.8rem)/1.1 var(--serif); letter-spacing: -.035em; margin: 0 0 25px;}
-body.page-home .about-grid{display: grid; grid-template-columns: 1fr 1.2fr; gap: 70px; align-items: start;}
-body.page-home .body-copy{max-width: 620px; color: #555B51; margin: 0 0 17px;}
-body.page-home .topics{display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 40px;}
-body.page-home .topic{background: var(--paper); padding: 27px 25px; min-height: 190px;
+body:is(.page-home, .page-home-es) h2{font: 400 clamp(2.2rem, 5vw, 3.8rem)/1.1 var(--serif); letter-spacing: -.035em; margin: 0 0 25px;}
+body:is(.page-home, .page-home-es) .about-grid{display: grid; grid-template-columns: 1fr 1.2fr; gap: 70px; align-items: start;}
+body:is(.page-home, .page-home-es) .body-copy{max-width: 620px; color: #555B51; margin: 0 0 17px;}
+body:is(.page-home, .page-home-es) .topics{display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 40px;}
+body:is(.page-home, .page-home-es) .topic{background: var(--paper); padding: 27px 25px; min-height: 190px;
       border: 1px solid rgba(52,58,50,.07);}
-body.page-home .topic-number{color: var(--sand); font: 400 1.5rem var(--serif);}
-body.page-home .topic h3{font: 400 1.45rem var(--serif); margin: 14px 0 9px;}
-body.page-home .topic p{color: var(--muted); font-size: .9rem; margin: 0;}
-body.page-home .book{background: #E9E4D9; padding: 44px; display: grid;
+body:is(.page-home, .page-home-es) .topic-number{color: var(--sand); font: 400 1.5rem var(--serif);}
+body:is(.page-home, .page-home-es) .topic h3{font: 400 1.45rem var(--serif); margin: 14px 0 9px;}
+body:is(.page-home, .page-home-es) .topic p{color: var(--muted); font-size: .9rem; margin: 0;}
+body:is(.page-home, .page-home-es) .book{background: #E9E4D9; padding: 44px; display: grid;
       grid-template-columns: 1fr 1.4fr; gap: 45px; align-items: center;}
-body.page-home .book-mark{min-height: 230px; background: var(--olive); color: var(--cream);
+body:is(.page-home, .page-home-es) .book-mark{min-height: 230px; background: var(--olive); color: var(--cream);
       display: flex; flex-direction: column; justify-content: center;
       padding: 30px; box-shadow: 8px 8px 0 var(--sand);}
-body.page-home .book-mark small{letter-spacing: .15em; font-size: .65rem;}
-body.page-home .book-mark strong{font: 400 2.1rem/1.15 var(--serif); margin-top: 22px;}
-body.page-home .book-mark span{font-size: .8rem; margin-top: 13px;}
-body.page-home .book h2{font-size: 2.5rem;}
-body.page-home .book p{color: #555B51;}
-body.page-home .contact{padding: 85px 0 100px; text-align: center;}
-body.page-home .contact h2{max-width: 650px; margin: 0 auto 18px;}
-body.page-home .contact p{color: var(--muted); margin: 0 auto; max-width: 540px;}
-body.page-home footer{border-top: 1px solid var(--line); padding: 25px 0; color: var(--muted); font-size: .75rem;}
-body.page-home footer .wrap{display: flex; justify-content: space-between; gap: 20px;}
-@media (max-width: 700px){body.page-home .wrap{width: min(100% - 36px, 540px);}
-body.page-home .header-right{width:100%;justify-content:space-between;gap:12px}
-body.page-home header{align-items: flex-start; gap: 18px; flex-direction: column;}
-body.page-home nav{gap: 18px; flex-wrap: wrap;}
-body.page-home .hero{min-height: 510px; padding: 85px 0;}
-body.page-home .about-grid, body.page-home .book{grid-template-columns: 1fr; gap: 25px;}
-body.page-home .section{padding: 65px 0;}
-body.page-home .topics{grid-template-columns: 1fr;}
-body.page-home .topic{min-height: auto;}
-body.page-home .book{padding: 25px;}
-body.page-home .book-mark{min-height: 200px;}
-body.page-home footer .wrap{flex-direction: column;}
+body:is(.page-home, .page-home-es) .book-mark small{letter-spacing: .15em; font-size: .65rem;}
+body:is(.page-home, .page-home-es) .book-mark strong{font: 400 2.1rem/1.15 var(--serif); margin-top: 22px;}
+body:is(.page-home, .page-home-es) .book-mark span{font-size: .8rem; margin-top: 13px;}
+body:is(.page-home, .page-home-es) .book h2{font-size: 2.5rem;}
+body:is(.page-home, .page-home-es) .book p{color: #555B51;}
+body:is(.page-home, .page-home-es) .contact{padding: 85px 0 100px; text-align: center;}
+body:is(.page-home, .page-home-es) .contact h2{max-width: 650px; margin: 0 auto 18px;}
+body:is(.page-home, .page-home-es) .contact p{color: var(--muted); margin: 0 auto; max-width: 540px;}
+body:is(.page-home, .page-home-es) footer{border-top: 1px solid var(--line); padding: 25px 0; color: var(--muted); font-size: .75rem;}
+body:is(.page-home, .page-home-es) footer .wrap{display: flex; justify-content: space-between; gap: 20px;}
+@media (max-width: 700px){body:is(.page-home, .page-home-es) .wrap{width: min(100% - 36px, 540px);}
+body:is(.page-home, .page-home-es) .header-right{width:100%;justify-content:space-between;gap:12px}
+body:is(.page-home, .page-home-es) header{align-items: flex-start; gap: 18px; flex-direction: column;}
+body:is(.page-home, .page-home-es) nav{gap: 18px; flex-wrap: wrap;}
+body:is(.page-home, .page-home-es) .hero{min-height: 510px; padding: 85px 0;}
+body:is(.page-home, .page-home-es) .about-grid, body:is(.page-home, .page-home-es) .book{grid-template-columns: 1fr; gap: 25px;}
+body:is(.page-home, .page-home-es) .section{padding: 65px 0;}
+body:is(.page-home, .page-home-es) .topics{grid-template-columns: 1fr;}
+body:is(.page-home, .page-home-es) .topic{min-height: auto;}
+body:is(.page-home, .page-home-es) .book{padding: 25px;}
+body:is(.page-home, .page-home-es) .book-mark{min-height: 200px;}
+body:is(.page-home, .page-home-es) footer .wrap{flex-direction: column;}
 
-    }@media (max-width: 480px){body.page-home .header-right{width: 100%; flex-wrap: wrap; align-items: flex-start; gap: 12px;}
-body.page-home .header-right nav{flex: 1 1 100%; gap: 12px 16px;}
-body.page-home .language{align-self: flex-start;}
-body.page-home h1{overflow-wrap: anywhere;}
+    }@media (max-width: 480px){body:is(.page-home, .page-home-es) .header-right{width: 100%; flex-wrap: wrap; align-items: flex-start; gap: 12px;}
+body:is(.page-home, .page-home-es) .header-right nav{flex: 1 1 100%; gap: 12px 16px;}
+body:is(.page-home, .page-home-es) .language{align-self: flex-start;}
+body:is(.page-home, .page-home-es) h1{overflow-wrap: anywhere;}
 
     }
   
