@@ -1042,55 +1042,60 @@ body.page-blog-es .empty {
 }
 
 
-/* Anchos editoriales coherentes en las páginas de contenido */
-:root { --reading-width: 760px; }
-
-body.page-about .hero,
-body.page-about-es .hero,
-body.page-topics .hero,
-body.page-topics-es .hero,
-body.page-blog .hero,
-body.page-blog-es .hero {
-  width: 100%;
-  max-width: none;
-}
-body.page-about .lead,
-body.page-about-es .lead,
-body.page-topics .lead,
-body.page-topics-es .lead,
-body.page-blog .lead,
-body.page-blog-es .lead,
-body.page-topics .intro,
-body.page-topics-es .intro,
-body.page-blog .intro,
-body.page-blog-es .intro,
-body.page-why .dek,
-body.page-why-es .dek {
-  max-width: var(--reading-width);
-}
-body.page-about .article,
-body.page-about-es .article,
-body.page-why .article,
-body.page-why-es .article {
-  width: 100%;
-  max-width: var(--reading-width);
+/* Responsive editorial layout for Gedanken / Thoughts */
+body.page-blog .content > .wrap,
+body.page-blog-es .content > .wrap {
+  width: min(1160px, calc(100% - 64px));
+  max-width: 1160px;
   margin-left: auto;
   margin-right: auto;
 }
 body.page-blog .empty,
 body.page-blog-es .article {
+  display: block;
   width: 100%;
-  max-width: var(--reading-width);
-  margin-left: auto;
-  margin-right: auto;
+  max-width: none;
+  margin: 0;
+  padding: clamp(24px, 4vw, 52px);
+  box-sizing: border-box;
+}
+body.page-blog .empty p:not(.label),
+body.page-blog-es .article p:not(.label) {
+  max-width: 760px;
+}
+body.page-blog .empty h2,
+body.page-blog-es .article h2 {
+  max-width: 900px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+  overflow-wrap: break-word;
+}
+body.page-blog .end,
+body.page-blog-es .end {
+  width: 100%;
+  max-width: none;
+  margin: clamp(44px, 6vw, 72px) 0 0;
+  box-sizing: border-box;
+}
+body.page-blog .end p:not(.label),
+body.page-blog-es .end p:not(.label) {
+  max-width: 760px;
 }
 @media (max-width: 700px) {
-  body.page-about .article,
-  body.page-about-es .article,
-  body.page-why .article,
-  body.page-why-es .article,
+  body.page-blog .content,
+  body.page-blog-es .content {
+    padding: 38px 0 64px;
+  }
+  body.page-blog .content > .wrap,
+  body.page-blog-es .content > .wrap {
+    width: min(calc(100% - 36px), 540px);
+  }
   body.page-blog .empty,
   body.page-blog-es .article {
-    max-width: 100%;
+    padding: clamp(22px, 6vw, 30px);
+  }
+  body.page-blog .end,
+  body.page-blog-es .end {
+    margin-top: 42px;
   }
 }
