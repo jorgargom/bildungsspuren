@@ -1099,3 +1099,23 @@ body.page-blog-es .end p:not(.label) {
     margin-top: 42px;
   }
 }
+
+
+/* Einheitliche Lesebreite für Einstieg und Artikel auf Über mich / Mein Weg */
+body.page-about .hero.wrap,
+body.page-about .article.wrap,
+body.page-about-es .hero.wrap,
+body.page-about-es .article.wrap {
+  width: min(760px, calc(100% - 64px));
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 700px) {
+  body.page-about .hero.wrap,
+  body.page-about .article.wrap,
+  body.page-about-es .hero.wrap,
+  body.page-about-es .article.wrap {
+    width: min(calc(100% - 36px), 540px);
+  }
+}
