@@ -1119,3 +1119,11 @@ body.page-about-es .article.wrap {
     width: min(calc(100% - 36px), 540px);
   }
 }
+
+/* Hero-Einleitungen folgen auf allen Seiten der gemeinsamen Inhaltsbreite */
+body[class]:not(.page-legal) .hero .lead,
+body[class]:not(.page-legal) .hero .intro,
+body[class]:not(.page-legal) .hero .claim,
+body[class]:not(.page-legal) .hero .dek {
+  max-width: none;
+}
