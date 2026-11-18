@@ -1011,3 +1011,32 @@ body.page-legal a:focus-visible { color: var(--ink); }
   }
   body.page-legal h1 { font-size: clamp(2.4rem, 12vw, 3.4rem); }
 }
+
+
+/* Contenedores unificados: header, secciones y footer comparten el mismo eje */
+body[class]:not(.page-legal) .wrap { width: min(1160px, calc(100% - 64px)); }
+@media (max-width: 700px) {
+  body[class]:not(.page-legal) .wrap { width: min(calc(100% - 36px), 540px); }
+}
+
+@media (max-width: 980px) {
+  body[class]:not(.page-legal) header.wrap {
+    width: min(calc(100% - 64px), 1160px);
+  }
+}
+@media (max-width: 700px) {
+  body[class]:not(.page-legal) header.wrap {
+    width: min(calc(100% - 36px), 540px);
+  }
+}
+
+
+/* Los bloques principales también parten del mismo ancho exterior */
+body[class]:not(.page-legal) .hero {
+  max-width: none;
+}
+body.page-blog .empty,
+body.page-blog-es .empty {
+  width: 100%;
+  max-width: none;
+}
